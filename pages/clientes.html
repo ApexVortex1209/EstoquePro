@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque Pro - Clientes</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div data-include="sidebar"></div>
+        <main class="content clientes-page">
+            <header class="page-header clientes-header">
+                <div class="clientes-titulo">
+                    <img class="clientes-icone" src="../assets/icone-clientes.jpg" alt="Ícone de clientes">
+                    <h1>Clientes</h1>
+                </div>
+            </header>
+
+            <div id="clientesMensagem" class="mensagem"></div>
+
+            <section class="cadastro-cliente">
+                <h2>Cadastro de cliente</h2>
+                <form id="formCliente" class="form-venda">
+                    <div class="campo-duplo">
+                        <div>
+                            <label for="nomeCliente">Nome completo</label>
+                            <input type="text" id="nomeCliente" name="nomeCliente" required>
+                        </div>
+                        <div>
+                            <label for="emailCliente">E-mail</label>
+                            <input type="email" id="emailCliente" name="emailCliente" required>
+                        </div>
+                    </div>
+
+                    <div class="campo-duplo">
+                        <div>
+                            <label for="telefoneCliente">Telefone</label>
+                            <input type="tel" id="telefoneCliente" name="telefoneCliente" placeholder="(00) 00000-0000">
+                        </div>
+                        <div>
+                            <label for="cidadeCliente">Cidade</label>
+                            <input type="text" id="cidadeCliente" name="cidadeCliente" placeholder="Cidade do cliente">
+                        </div>
+                    </div>
+
+                    <div class="acao-venda">
+                        <button type="submit" id="btnSalvarCliente" class="btn-primary">Cadastrar Cliente</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="lista-clientes">
+                <h2>Clientes cadastrados</h2>
+                <table>
+                    <thead>
+                        <tr><th>Nome</th><th>E-mail</th><th>Telefone</th><th>Cidade</th><th>Data</th><th>Ações</th></tr>
+                    </thead>
+                    <tbody id="listaClientes"></tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="../js/include-partials.js"></script>
+    <script src="../js/clientes.js"></script>
+</body>
+</html>

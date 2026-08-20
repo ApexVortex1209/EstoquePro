@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque Pro - Login</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="login-body">
+    <div class="login-shell compact-login-shell">
+        <main class="login-panel compact-login-panel premium-panel">
+            <div class="premium-banner">
+                <span class="mini-badge">Estoque Pro</span>
+                <h2>Controle inteligente do seu estoque</h2>
+                <p>Gestão de produtos, clientes e acessos em um sistema moderno, rápido e profissional.</p>
+            </div>
+
+            <div class="login-brand compact-brand">
+                <div class="brand-logo">
+                    <img src="../assets/icone-login.jpeg" alt="Ícone de login">
+                </div>
+                <div class="brand-copy">
+                    <span>Estoque Pro</span>
+                </div>
+            </div>
+
+            <div id="loginMensagem" class="login-mensagem"></div>
+
+            <form id="formLogin" class="auth-form compact-form" autocomplete="off">
+                <label for="tipoLogin">Tipo de acesso</label>
+                <select id="tipoLogin" name="tipoLogin" required>
+                    <option value="owner">Dono</option>
+                    <option value="manager">Gerente</option>
+                    <option value="employee">Funcionário</option>
+                </select>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Sua senha" required>
+
+                <button type="submit">Entrar</button>
+            </form>
+
+            <button type="button" class="forgot-link" id="toggleRecuperarSenha">Esquecer senha?</button>
+
+            <div id="recuperarSenhaBox" class="recuperar-senha-box" hidden>
+                <form id="formRecuperarSenha" class="auth-form compact-form">
+                    <label for="emailRecuperar">Digite seu e-mail</label>
+                    <input type="email" id="emailRecuperar" name="emailRecuperar" placeholder="seu@email.com" required>
+                    <button type="submit" class="button-secondary">Enviar senha</button>
+                </form>
+            </div>
+
+            <div class="cadastro-conta compact-cadastro">
+                <h2>Criar conta</h2>
+                <div id="cadastroMensagem" class="login-mensagem"></div>
+                <form id="formCadastroAcesso" class="auth-form compact-form">
+                    <label for="nomeCadastro">Nome completo</label>
+                    <input type="text" id="nomeCadastro" name="nomeCadastro" placeholder="Seu nome" required>
+
+                    <label for="emailCadastro">E-mail</label>
+                    <input type="email" id="emailCadastro" name="emailCadastro" placeholder="seu@email.com" required>
+
+                    <label for="senhaCadastro">Senha</label>
+                    <input type="password" id="senhaCadastro" name="senhaCadastro" placeholder="Crie uma senha" required>
+
+                    <label for="tipoCadastro">Tipo de acesso</label>
+                    <select id="tipoCadastro" name="tipoCadastro" required>
+                        <option value="owner">Dono</option>
+                        <option value="manager">Gerente</option>
+                        <option value="employee">Funcionário</option>
+                    </select>
+
+                    <button type="submit">Cadastrar conta</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="../js/auth.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>

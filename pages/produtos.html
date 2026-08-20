@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque Pro - Produtos</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div data-include="sidebar"></div>
+        <main class="content">
+            <header class="page-header produtos-header">
+                <div class="produtos-titulo">
+                    <img class="produtos-icone" src="../assets/icone-produtos.jpeg" alt="Ícone de produtos">
+                    <h1>Produtos</h1>
+                </div>
+            </header>
+            <section class="filtros">
+                <input id="pesquisa" type="text" placeholder="Pesquisar produtos">
+                <select id="categoria"></select>
+                <button id="novoProduto" type="button">Cadastrar Produto</button>
+            </section>
+            <section class="lista-produtos">
+                <table>
+                    <thead>
+                        <tr><th>Nome</th><th>Código</th><th>Categoria</th><th>Estoque</th><th>Preço</th><th>Ações</th></tr>
+                    </thead>
+                    <tbody id="listaProdutos"></tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="../js/include-partials.js"></script>
+    <script src="../js/produtos.js"></script>
+</body>
+</html>

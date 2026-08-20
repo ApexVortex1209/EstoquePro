@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Estoque Pro - Cadastro</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div data-include="sidebar"></div>
+
+    <!-- CONTEÚDO -->
+
+    <main class="content cadastro-page">
+
+        <header class="page-header cadastro-header">
+
+            <div class="cadastro-titulo">
+                <img class="cadastro-icone" src="../assets/icone-cadastro.jpeg" alt="Ícone de cadastro">
+                <h1>Cadastro de Produto</h1>
+            </div>
+
+        </header>
+
+        <form id="formProduto" class="form-cadastro-produto">
+
+            <!-- NOME -->
+
+            <label for="nomeProduto">
+                Nome do Produto
+            </label>
+
+            <input
+                type="text"
+                id="nomeProduto"
+                name="nomeProduto"
+                placeholder="Digite o nome do produto"
+                required
+            >
+
+
+            <!-- CÓDIGO INTERNO -->
+
+            <label for="codigoInterno">
+                Código Interno
+            </label>
+
+            <input
+                type="text"
+                id="codigoInterno"
+                name="codigoInterno"
+                placeholder="Gerado automaticamente"
+                readonly
+            >
+
+
+            <!-- CÓDIGO DE BARRAS -->
+
+            <label for="codigoBarras">
+                Código de Barras
+            </label>
+
+            <input
+                type="text"
+                id="codigoBarras"
+                name="codigoBarras"
+                placeholder="Ex.: 7891234567890"
+            >
+
+
+            <!-- CATEGORIA -->
+
+            <label for="categoria">
+                Categoria
+            </label>
+
+            <select
+                id="categoria"
+                name="categoria"
+                required
+            >
+
+                <option value="">
+                    Selecione uma categoria
+                </option>
+
+                <option value="informatica">
+                    Informática
+                </option>
+
+                <option value="eletrodomesticos">
+                    Eletrodomésticos
+                </option>
+
+                <option value="roupas">
+                    Roupas
+                </option>
+
+                <option value="outros">
+                    Outros
+                </option>
+
+            </select>
+
+
+            <!-- PREÇO DE CUSTO -->
+
+            <label for="precoCusto">
+                Preço de Custo
+            </label>
+
+            <input
+                type="number"
+                id="precoCusto"
+                name="precoCusto"
+                placeholder="0,00"
+                step="0.01"
+                min="0"
+                required
+            >
+
+
+            <!-- PREÇO DE VENDA -->
+
+            <label for="precoVenda">
+                Preço de Venda
+            </label>
+
+            <input
+                type="number"
+                id="precoVenda"
+                name="precoVenda"
+                placeholder="0,00"
+                step="0.01"
+                min="0"
+                required
+            >
+
+
+            <!-- QUANTIDADE -->
+
+            <label for="quantidade">
+                Quantidade Inicial
+            </label>
+
+            <input
+                type="number"
+                id="quantidade"
+                name="quantidade"
+                placeholder="Quantidade inicial"
+                min="0"
+                required
+            >
+
+
+            <!-- ESTOQUE MÍNIMO -->
+
+            <label for="estoqueMinimo">
+                Estoque Mínimo
+            </label>
+
+            <input
+                type="number"
+                id="estoqueMinimo"
+                name="estoqueMinimo"
+                placeholder="Quantidade mínima"
+                min="0"
+                value="0"
+            >
+
+
+            <!-- UNIDADE -->
+
+            <label for="unidade">
+                Unidade de Medida
+            </label>
+
+            <select
+                id="unidade"
+                name="unidade"
+                required
+            >
+
+                <option value="">
+                    Selecione
+                </option>
+
+                <option value="unidade">
+                    Unidade (un)
+                </option>
+
+                <option value="kg">
+                    Quilograma (kg)
+                </option>
+
+                <option value="litro">
+                    Litro (L)
+                </option>
+
+                <option value="caixa">
+                    Caixa
+                </option>
+
+                <option value="pacote">
+                    Pacote
+                </option>
+
+            </select>
+
+
+            <!-- LOCAL -->
+
+            <label for="localEstoque">
+                Local do Estoque
+            </label>
+
+            <input
+                type="text"
+                id="localEstoque"
+                name="localEstoque"
+                placeholder="Ex.: Depósito - Prateleira A3"
+                required
+            >
+
+
+            <!-- BOTÃO -->
+
+            <button
+                type="submit"
+                id="btnSalvarProduto"
+            >
+                Cadastrar Produto
+            </button>
+
+        </form>
+
+    </main>
+
+</div>
+
+
+<script src="../js/include-partials.js"></script>
+<script src="../js/cadastro.js"></script>
+
+</body>
+
+</html>

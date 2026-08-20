@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque Pro - Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div data-include="sidebar"></div>
+        <main class="content">
+            <header class="page-header">
+                <div>
+                    <span class="eyebrow">Painel geral</span>
+                    <h1>Dashboard</h1>
+                </div>
+            </header>
+
+            <section class="dashboard-hero">
+                <div>
+                    <span>Visão geral do estoque</span>
+                    <h2>Seu negócio em tempo real</h2>
+                    <p>Acompanhe produtos, faturamento, estoque e desempenho com uma visão mais clara e profissional.</p>
+                </div>
+                <button type="button" class="hero-btn">Ver relatórios</button>
+            </section>
+
+            <section class="cards">
+                <div class="card accent-blue"><h3>Total de Produtos</h3><p id="totalProdutos">0</p></div>
+                <div class="card accent-green"><h3>Valor do Estoque</h3><p id="valorEstoque">R$ 0,00</p></div>
+                <div class="card accent-amber"><h3>Estoque Baixo</h3><p id="estoqueBaixo">0</p></div>
+                <div class="card accent-red"><h3>Sem Estoque</h3><p id="estoqueZerado">0</p></div>
+                <div class="card accent-violet"><h3>Quantidade em Estoque</h3><p id="quantidadeEstoque">0</p></div>
+            </section>
+            <section class="alertas">
+                <h2>Produtos que precisam de atenção</h2>
+                <div class="tabela-alerta">
+                    <table>
+                        <thead>
+                            <tr><th>Produto</th><th>Código</th><th>Estoque</th><th>Estoque Mínimo</th><th>Status</th></tr>
+                        </thead>
+                        <tbody id="produtosAlerta"></tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="resumo-dashboard">
+                <h2>Resumo do Estoque</h2>
+                <p>Consulte abaixo as principais informações dos produtos cadastrados.</p>
+            </section>
+        </main>
+    </div>
+    <script src="../js/include-partials.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/alertas.js"></script>
+</body>
+</html>

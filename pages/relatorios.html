@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque Pro - Relatórios</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div data-include="sidebar"></div>
+        <main class="content">
+            <header class="relatorios-header">
+                <div>
+                    <p class="eyebrow">VISÃO GERENCIAL</p>
+                    <div class="relatorios-titulo">
+                        <img class="relatorios-icone" src="../assets/icone-relatorios.jpg" alt="Ícone de relatórios">
+                        <h1>Relatórios</h1>
+                    </div>
+                    <p>Veja o desempenho das vendas e as prioridades do seu estoque.</p>
+                </div>
+                <button id="exportarRelatorio" type="button" class="btn-secondary">Exportar vendas (CSV)</button>
+            </header>
+
+            <section class="relatorios-filtros" aria-label="Filtros do relatório">
+                <div>
+                    <label for="periodoRelatorio">Período</label>
+                    <select id="periodoRelatorio">
+                        <option value="hoje">Hoje</option>
+                        <option value="7">Últimos 7 dias</option>
+                        <option value="30" selected>Últimos 30 dias</option>
+                        <option value="todos">Todo o período</option>
+                    </select>
+                </div>
+                <p id="periodoDescricao" class="periodo-descricao"></p>
+            </section>
+
+            <section class="cards relatorio-cards">
+                <div class="card"><h3>Faturamento</h3><p id="relatorioFaturamento">R$ 0,00</p></div>
+                <div class="card"><h3>Vendas realizadas</h3><p id="relatorioVendas">0</p></div>
+                <div class="card"><h3>Itens vendidos</h3><p id="relatorioItensVendidos">0</p></div>
+            </section>
+
+            <section class="relatorio-grid">
+                <article class="relatorio-bloco">
+                    <div class="relatorio-bloco-titulo"><h2>Produtos mais vendidos</h2><span>Por quantidade</span></div>
+                    <div class="tabela-alerta"><table><thead><tr><th>Produto</th><th>Quantidade</th><th>Faturamento</th></tr></thead><tbody id="produtosMaisVendidos"></tbody></table></div>
+                </article>
+                <article class="relatorio-bloco">
+                    <div class="relatorio-bloco-titulo"><h2>Estoque que exige atenção</h2><span id="totalEstoqueCritico">0 produtos</span></div>
+                    <div class="tabela-alerta"><table><thead><tr><th>Produto</th><th>Estoque atual</th><th>Status</th></tr></thead><tbody id="estoqueCritico"></tbody></table></div>
+                </article>
+            </section>
+
+            <section class="relatorio-bloco">
+                <div class="relatorio-bloco-titulo"><h2>Produtos sem movimentação</h2><span>Sem registros nos últimos 30 dias</span></div>
+                <div class="tabela-alerta"><table><thead><tr><th>Produto</th><th>Código</th><th>Estoque</th><th>Valor em estoque</th></tr></thead><tbody id="produtosParados"></tbody></table></div>
+            </section>
+        </main>
+    </div>
+    <script src="../js/include-partials.js"></script>
+    <script src="../js/relatorios.js"></script>
+</body>
+</html>
