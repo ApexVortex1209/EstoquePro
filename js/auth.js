@@ -39,7 +39,8 @@
 
         const users = getUsers();
         const existsByEmail = users.some((user) => user.email.toLowerCase() === email.toLowerCase());
-        const existsByRole = users.some((user) => user.role === role);
+        // Dono e gerente são acessos únicos; funcionários podem ser cadastrados livremente.
+        const existsByRole = role !== 'employee' && users.some((user) => user.role === role);
 
         if (existsByEmail || existsByRole) {
             return false;
@@ -97,7 +98,11 @@
         });
 
         defaultUsers.forEach((defaultUser) => {
-            const existingUser = userByRole.get(defaultUser.role);
+            // Pode haver vários funcionários. Para a conta padrão desse perfil,
+            // localize-a pelo e-mail em vez de usar o último funcionário cadastrado.
+            const existingUser = defaultUser.role === 'employee'
+                ? users.find((user) => user && user.email && user.email.toLowerCase() === defaultUser.email.toLowerCase())
+                : userByRole.get(defaultUser.role);
 
             if (!existingUser) {
                 users.push(defaultUser);

@@ -50,7 +50,7 @@
 
             Array.from(select.options).forEach(function(option) {
                 const role = option.value;
-                const ocupado = usuarios.some(function(usuario) {
+                const ocupado = role !== 'employee' && usuarios.some(function(usuario) {
                     return usuario.role === role;
                 });
                 option.disabled = ocupado;
@@ -148,7 +148,7 @@
             }
 
             const usuarios = Auth.getUsers();
-            const perfilOcupado = usuarios.some(function(usuario) {
+            const perfilOcupado = role !== 'employee' && usuarios.some(function(usuario) {
                 return usuario.role === role;
             });
 
