@@ -64,4 +64,4 @@ EstoquePro/
 
 ## Autor
 
-Projeto desenvolvido para o sistema **Estoque Pro**.
+Desenvolvido por [ApexVortex1209](https://github.com/ApexVortex1209).
