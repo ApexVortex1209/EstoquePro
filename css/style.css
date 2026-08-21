@@ -1931,3 +1931,726 @@ td button:last-child:hover {
     width: 100%;
   }
 }
+/* ======================================================
+   RESPONSIVIDADE MOBILE - ESTOQUE PRO
+   ====================================================== */
+
+@media (max-width: 700px) {
+
+  /* ==============================
+     CONFIGURAÇÃO GERAL
+     ============================== */
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  /* ==============================
+     MENU MOBILE
+     ============================== */
+
+  .sidebar {
+    position: relative;
+    top: auto;
+    left: auto;
+
+    width: 100%;
+    height: auto;
+    min-height: auto;
+
+    padding: 12px;
+    overflow: hidden;
+
+    border-right: none;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.15);
+
+    z-index: 100;
+  }
+
+  .sidebar-brand {
+    padding: 8px 6px 12px;
+    margin-bottom: 8px;
+  }
+
+  .sidebar-brand-mark {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+  }
+
+  .sidebar-brand-text strong {
+    font-size: 15px;
+  }
+
+  .sidebar-brand-text span {
+    font-size: 10px;
+  }
+
+  .sidebar ul {
+    display: flex;
+
+    width: 100%;
+
+    gap: 6px;
+
+    margin-top: 10px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding-bottom: 5px;
+
+    scrollbar-width: thin;
+  }
+
+  .sidebar li {
+    flex: 0 0 auto;
+  }
+
+  .sidebar a {
+    display: block;
+
+    padding: 9px 12px;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+    border-radius: 9px;
+  }
+
+  .sidebar-user-info {
+    margin-top: 10px;
+    padding: 9px;
+
+    font-size: 12px;
+  }
+
+  .sidebar-logout {
+    margin-top: 8px;
+    min-height: 40px;
+  }
+
+  /* ==============================
+     CONTEÚDO PRINCIPAL
+     ============================== */
+
+  .content {
+    width: 100%;
+
+    margin-left: 0;
+
+    padding: 18px 12px 30px;
+
+    min-width: 0;
+  }
+
+  .content header h1 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .page-header,
+  .cadastro-header,
+  .configuracoes-header {
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  /* ==============================
+     TÍTULOS
+     ============================== */
+
+  .produtos-titulo,
+  .fornecedores-titulo,
+  .cadastro-titulo,
+  .estoque-titulo,
+  .vendas-titulo,
+  .clientes-titulo,
+  .configuracoes-titulo,
+  .relatorios-titulo {
+    gap: 9px;
+    align-items: center;
+  }
+
+  .produtos-icone,
+  .fornecedores-icone,
+  .cadastro-icone,
+  .estoque-icone,
+  .vendas-icone,
+  .clientes-icone,
+  .configuracoes-icone,
+  .relatorios-icone {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+
+  /* ==============================
+     DASHBOARD
+     ============================== */
+
+  .dashboard-hero {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 20px 18px;
+
+    gap: 15px;
+
+    border-radius: 17px;
+  }
+
+  .dashboard-hero h2 {
+    font-size: 23px;
+  }
+
+  .dashboard-hero p {
+    font-size: 13px;
+  }
+
+  .hero-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ==============================
+     CARDS
+     ============================== */
+
+  .cards {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+  }
+
+  .card {
+    padding: 18px 14px;
+
+    border-radius: 14px;
+
+    min-width: 0;
+  }
+
+  .card h3 {
+    font-size: 11px;
+
+    line-height: 1.3;
+
+    margin-bottom: 8px;
+  }
+
+  .card p {
+    font-size: 21px;
+
+    word-break: break-word;
+  }
+
+  /* ==============================
+     FILTROS
+     ============================== */
+
+  .filtros {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+  }
+
+  .filtros input,
+  .filtros select,
+  .filtros textarea,
+  .filtros button {
+    width: 100%;
+
+    min-width: 0;
+
+    min-height: 44px;
+  }
+
+  .filtros input {
+    min-width: 0;
+  }
+
+  /* ==============================
+     TABELAS
+     ============================== */
+
+  .lista-produtos,
+  .lista-clientes,
+  .lista-movimentacoes,
+  .lista-vendas,
+  .tabela-alerta {
+    width: 100%;
+
+    max-width: 100%;
+
+    overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
+
+    border-radius: 14px;
+  }
+
+  table {
+    min-width: 650px;
+
+    width: max-content;
+  }
+
+  th,
+  td {
+    padding: 11px 10px;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+  }
+
+  th {
+    font-size: 11px;
+  }
+
+  td button {
+    padding: 7px 9px;
+
+    font-size: 11px;
+
+    margin-right: 4px;
+  }
+
+  /* ==============================
+     FORMULÁRIO PRODUTO
+     ============================== */
+
+  #formProduto,
+  .form-cadastro-produto {
+    width: 100%;
+
+    max-width: 100%;
+
+    padding: 18px 15px;
+
+    border-radius: 15px;
+  }
+
+  #formProduto label,
+  .form-cadastro-produto label {
+    font-size: 13px;
+
+    margin-top: 15px;
+  }
+
+  #formProduto input,
+  #formProduto select,
+  #formProduto textarea,
+  .form-cadastro-produto input,
+  .form-cadastro-produto select,
+  .form-cadastro-produto textarea {
+    min-height: 44px;
+
+    font-size: 14px;
+  }
+
+  #formProduto textarea,
+  .form-cadastro-produto textarea {
+    min-height: 100px;
+  }
+
+  #btnSalvarProduto {
+    width: 100%;
+
+    max-width: none;
+
+    min-height: 46px;
+  }
+
+  /* ==============================
+     FORMULÁRIO CLIENTE
+     ============================== */
+
+  .cadastro-cliente {
+    padding: 18px 15px;
+
+    margin-bottom: 18px;
+
+    border-radius: 15px;
+  }
+
+  #formCliente {
+    gap: 12px;
+  }
+
+  #formCliente input {
+    min-height: 44px;
+  }
+
+  #btnSalvarCliente {
+    min-height: 46px;
+  }
+
+  .lista-clientes {
+    padding: 15px;
+  }
+
+  .lista-clientes h2 {
+    font-size: 19px;
+  }
+
+  /* ==============================
+     ESTOQUE / MOVIMENTAÇÃO
+     ============================== */
+
+  .form-movimentacao,
+  .lista-movimentacoes {
+    padding: 18px 15px;
+
+    border-radius: 15px;
+
+    margin-bottom: 18px;
+  }
+
+  .form-movimentacao h2,
+  .lista-movimentacoes h2 {
+    font-size: 19px;
+  }
+
+  #formMovimentacao {
+    gap: 12px;
+  }
+
+  #formMovimentacao input,
+  #formMovimentacao select {
+    min-height: 44px;
+  }
+
+  #formMovimentacao button {
+    min-height: 46px;
+  }
+
+  /* ==============================
+     VENDAS
+     ============================== */
+
+  .venda-panel {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .venda-form-box,
+  .venda-resumo-box,
+  .lista-vendas {
+    padding: 17px 14px;
+
+    border-radius: 15px;
+  }
+
+  .venda-form-box h2,
+  .venda-resumo-box h2,
+  .lista-vendas h2 {
+    font-size: 19px;
+  }
+
+  .form-venda {
+    gap: 13px;
+  }
+
+  .campo-duplo {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .form-venda input,
+  .form-venda select,
+  .form-venda textarea {
+    min-height: 44px;
+
+    font-size: 14px;
+  }
+
+  .acao-venda {
+    width: 100%;
+  }
+
+  .btn-primary {
+    width: 100%;
+
+    min-height: 46px;
+  }
+
+  .btn-success {
+    min-height: 46px;
+  }
+
+  .item-venda {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 12px;
+  }
+
+  .item-acoes {
+    width: 100%;
+
+    justify-content: flex-end;
+  }
+
+  .lista-vendas table {
+    min-width: 720px;
+  }
+
+  /* ==============================
+     RELATÓRIOS
+     ============================== */
+
+  .relatorios-header {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 12px;
+  }
+
+  .relatorios-filtros {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 12px;
+
+    margin: 18px 0;
+
+    padding: 15px;
+  }
+
+  .relatorios-filtros select,
+  .btn-secondary {
+    width: 100%;
+
+    min-height: 44px;
+  }
+
+  .relatorio-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .relatorio-bloco {
+    padding: 15px;
+
+    overflow-x: auto;
+
+    border-radius: 14px;
+  }
+
+  .relatorio-bloco-titulo {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 5px;
+  }
+
+  .relatorio-bloco-titulo span {
+    text-align: left;
+  }
+
+  /* ==============================
+     RESUMO
+     ============================== */
+
+  .resumo-dashboard {
+    margin-top: 20px;
+
+    padding: 18px 15px;
+
+    border-radius: 14px;
+  }
+
+  .resumo-dashboard h2 {
+    font-size: 19px;
+  }
+
+  .resumo-dashboard p {
+    font-size: 13px;
+  }
+
+  /* ==============================
+     BOTÕES
+     ============================== */
+
+  button,
+  .btn-primary,
+  .btn-success,
+  .btn-secondary {
+    min-height: 44px;
+  }
+
+  /* ==============================
+     LOGIN NO CELULAR
+     ============================== */
+
+  .login-shell {
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 25px 12px;
+
+    gap: 18px;
+  }
+
+  .login-visual {
+    width: 100%;
+  }
+
+  .login-visual-card {
+    padding: 25px 20px;
+
+    border-radius: 20px;
+  }
+
+  .login-visual-card h2 {
+    font-size: 23px;
+  }
+
+  .login-panel {
+    width: 100%;
+
+    padding: 20px 15px;
+
+    border-radius: 18px;
+  }
+
+  .compact-login-panel {
+    width: 100%;
+
+    padding: 16px 14px 18px;
+  }
+
+  .login-panel h1,
+  .cadastro-conta h2 {
+    font-size: 22px;
+  }
+
+  .login-brand {
+    gap: 10px;
+  }
+
+  .brand-logo {
+    width: 62px;
+    height: 62px;
+  }
+
+  .auth-form {
+    gap: 10px;
+  }
+
+  .auth-form input,
+  .auth-form select,
+  .auth-form textarea {
+    min-height: 44px;
+
+    font-size: 14px;
+  }
+
+  .auth-form button,
+  .button-secondary {
+    min-height: 46px;
+  }
+
+  /* ==============================
+     ESPAÇAMENTOS
+     ============================== */
+
+  .cadastro-page,
+  .config-page {
+    padding-top: 10px;
+  }
+}
+
+
+/* ======================================================
+   CELULARES MUITO PEQUENOS
+   ====================================================== */
+
+@media (max-width: 400px) {
+
+  .content {
+    padding: 14px 10px 25px;
+  }
+
+  .sidebar {
+    padding: 10px;
+  }
+
+  .sidebar a {
+    padding: 8px 10px;
+
+    font-size: 11px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card p {
+    font-size: 24px;
+  }
+
+  .content header h1 {
+    font-size: 21px;
+  }
+
+  .produtos-icone,
+  .fornecedores-icone,
+  .cadastro-icone,
+  .estoque-icone,
+  .vendas-icone,
+  .clientes-icone,
+  .configuracoes-icone,
+  .relatorios-icone {
+    width: 32px;
+    height: 32px;
+  }
+
+  #formProduto,
+  .form-cadastro-produto,
+  .cadastro-cliente,
+  .form-movimentacao,
+  .venda-form-box,
+  .venda-resumo-box {
+    padding: 15px 12px;
+  }
+}
